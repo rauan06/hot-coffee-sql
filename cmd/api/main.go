@@ -13,7 +13,7 @@ func Init() {
 	cfg := config.LoadConfig()
 
 	// Start server
-	mux := router.GetHTTPMultiplexer()
+	mux := router.NewRouter()
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%d", cfg.HttpPort),
 		Handler: mux,
