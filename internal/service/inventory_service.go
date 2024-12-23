@@ -14,26 +14,14 @@ type inventoryService struct {
 	repo dal.InventoryRepository
 }
 
-func (s *inventoryService) AddItemToInventory() {
-	// Implementation here
-}
-
-func (s *inventoryService) GetInventory() {
-	// Implementation here
-}
-
-func (s *inventoryService) GetInventoryByID() {
-	// Implementation here
-}
-
-func (s *inventoryService) UpdateInventoryItem() {
-	// Implementation here
-}
-
-func (s *inventoryService) RemoveItemFromInventory() {
-	// Implementation here
-}
+func (s *inventoryService) AddItemToInventory()      {}
+func (s *inventoryService) GetInventory()            {}
+func (s *inventoryService) GetInventoryByID()        {}
+func (s *inventoryService) UpdateInventoryItem()     {}
+func (s *inventoryService) RemoveItemFromInventory() {}
 
 func NewInventoryService() InventoryService {
-	return &inventoryService{}
+	return &inventoryService{
+		repo: dal.NewInventoryRepository(),
+	}
 }
